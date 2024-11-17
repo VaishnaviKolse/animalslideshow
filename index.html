@@ -50,6 +50,39 @@
       <img src="img/pre.png" class="ico-action ico-prev" onclick="prev()" />
       <img src="img/next.png" class="ico-action ico-next" onclick="next()" />
     </div>
+    <script>
+        const images = [
+          "img/dog.png",
+          "img/cat.png",
+          "img/squrral.png",
+          "img/elephant.png",
+          "img/giraffe.png",
+          "img/tiger.png",
+        ];
+  
+        let index = 0;
+        const slide = document.getElementById("slide");
+  
+        function next() {
+          if (index < images.length - 1) {
+            index++;
+          } else {
+            index = 0;
+          }
+  
+          slide.src = images[index];
+        }
+  
+        function prev() {
+          if (index > 0) {
+            index--;
+          } else {
+            index = images.length - 1;
+          }
+  
+          slide.src = images[index];
+        }
+      </script>
 
     
   </body>
